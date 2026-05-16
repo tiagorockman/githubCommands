@@ -49,6 +49,33 @@ If you want the repository to be private, use:
 gh repo create ReleaseManager --private --source . --remote origin --push
 ```
 
+### In case of --remote origin fails
+* If GitHub created the repository but the remote was not added locally, you can fix it manually:
+```powershell
+git remote add origin https://github.com/tiagorockman/ReleaseManager.git
+git branch -M main
+git push -u origin main
+```
+
+* If origin already exists
+```powershell
+git remote -v
+```
+
+* If origin is wrong, update it:
+```powershell
+git remote set-url origin https://github.com/tiagorockman/ReleaseManager.git
+```
+Then
+
+```powershell
+git push -u origin main
+```
+
+```powershell
+* git remote -v
+```
+
 ### Optional Git Identity Setup
 If Git asks for your identity before committing, configure it with:
 ```powershell

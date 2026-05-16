@@ -32,17 +32,19 @@ git commit -m "Initial commit"
 git branch -M main
 gh repo create ReleaseManager --public --source . --remote origin --push
 ```
+<ul>
+What This Does 
+<li>Initializes a local Git repository</li>  
+ <li>Stages the project files </li>  
+  <li> Creates the first commit </li>  
+   <li>  Renames the default branch to main </li>  
+   <li>  Creates a new public GitHub repository named ReleaseManager </li>  
+  <li>   Adds the GitHub repository as origin </li>  
+  <li>   Pushes the local code to GitHub</li>  
+   <li>  Create a Private Repository Instead</li>  
+</ul>
+If you want the repository to be private, use:
 
-What This Does
-  Initializes a local Git repository
-  Stages the project files
-  Creates the first commit
-  Renames the default branch to main
-  Creates a new public GitHub repository named ReleaseManager
-  Adds the GitHub repository as origin
-  Pushes the local code to GitHub
-  Create a Private Repository Instead
-  If you want the repository to be private, use:
 ```powershell
 gh repo create ReleaseManager --private --source . --remote origin --push
 ```
